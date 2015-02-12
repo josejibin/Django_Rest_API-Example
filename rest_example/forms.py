@@ -1,11 +1,8 @@
 from __future__ import absolute_import
-
 import warnings
 
 from django import forms
-
 from django.utils.translation import pgettext, ugettext_lazy as _, ugettext
-
 
 from rest_example.models import MyUser
 
@@ -51,7 +48,7 @@ class SignupForm(forms.Form):
       
         user  = MyUser()
         data = self.cleaned_data
-       
+
         if 'password1' in data:
             user.set_password(data["password1"])
         else:
